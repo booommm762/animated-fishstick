@@ -2,10 +2,62 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Meine Amazon-Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Amazon-Produkte</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .product {
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 500px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .product a {
+      display: inline-block;
+      margin-top: 10px;
+      background: #ff9900;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .product a:hover {
+      background: #e68a00;
+    }
+  </style>
 </head>
 <body>
-  <h1>Willkommen auf meiner Amazon-Werbe-Website!</h1>
-  <p><a href="https://www.amazon.de/dp/B09G9F5C4T?tag=deintag-21" target="_blank">Mein Lieblingsprodukt</a></p>
+  <h1>Empfohlene Amazon-Produkte</h1>
+
+  <div class="product">
+    <h2>Echo Dot (5. Gen)</h2>
+    <img src="https://images-na.ssl-images-amazon.com/images/I/714Rq4k05UL._AC_SL1000_.jpg" alt="Echo Dot">
+    <p>Smarter Lautsprecher mit Alexa – ideal für dein Zuhause.</p>
+    <a href="https://www.amazon.de/dp/B09B8V3DXT?tag=dein-tag-21" target="_blank">Jetzt auf Amazon ansehen</a>
+  </div>
+
+  <div class="product">
+    <h2>Fire TV Stick 4K</h2>
+    <img src="https://images-na.ssl-images-amazon.com/images/I/51Da2Z+FTaL._AC_SL1000_.jpg" alt="Fire TV Stick">
+    <p>Streamen in brillanter 4K-Qualität – einfach anstecken und loslegen.</p>
+    <a href="https://www.amazon.de/dp/B08XVYZ1Y5?tag=dein-tag-21" target="_blank">Jetzt auf Amazon ansehen</a>
+  </div>
 </body>
 </html>
