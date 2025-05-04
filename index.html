@@ -2,123 +2,97 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amazon Empfehlungen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Top Laptop Empfehlung</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
       margin: 0;
-      padding: 20px;
-    }
-    h1 {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: #fff;
       text-align: center;
-      margin-bottom: 30px;
+      padding: 30px;
     }
-    #search {
-      display: block;
-      margin: 0 auto 30px;
-      padding: 10px;
-      width: 80%;
+
+    header {
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    .product-card {
+      background-color: #ffffff10;
+      border: 2px solid #ffffff20;
+      border-radius: 16px;
+      padding: 25px;
       max-width: 400px;
-      font-size: 16px;
+      margin: 0 auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
     }
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .product {
-      background: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      width: 280px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .product img {
+
+    .product-card img {
       max-width: 100%;
-      height: auto;
-      border-radius: 4px;
+      border-radius: 12px;
+      margin-bottom: 20px;
     }
-    .product h2 {
-      font-size: 18px;
-      margin: 10px 0;
+
+    .product-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
     }
-    .product p {
-      font-size: 14px;
-      color: #555;
+
+    .product-card p {
+      font-size: 1rem;
+      color: #f0f0f0;
     }
-    .product a {
+
+    .product-card a {
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 20px;
       background: #ff9900;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 4px;
+      color: #fff;
+      padding: 12px 20px;
       text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
-    .product a:hover {
+
+    .product-card a:hover {
       background: #e68a00;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <h1>Meine Amazon Empfehlungen</h1>
+  <header>
+    <h1>🎒 Perfekt für Schule & Freizeit</h1>
+    <p>Unsere Laptop-Empfehlung für smarte Jugendliche!</p>
+  </header>
 
-  <input type="text" id="search" placeholder="Produkt suchen...">
-
-  <div class="products" id="productList">
-    <!-- Produkte werden hier eingefügt -->
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71W6zYtQwFL._AC_SL1500_.jpg" alt="Laptop">
+    <h2>HP Pavilion 15,6" Laptop</h2>
+    <p>Starkes Design, flotte Leistung: Ideal für Streaming, Hausaufgaben & Gaming.</p>
+    <a href=https://amzn.to/3GFsCwD target="_blank">Jetzt auf Amazon ansehen</a>
   </div>
 
-  <script>
-    const products = [
-     
-      {
-        name: "Fire TV Stick 4K",
-        image: "https://images-na.ssl-images-amazon.com/images/I/51Da2Z+FTaL._AC_SL1000_.jpg",
-        description: "Streamen in 4K-Qualität – einfach anstecken und loslegen.",
-        link: "https://www.amazon.de/dp/B08XVYZ1Y5?tag=dein-tag-21"
-      },
-      {
-        name: "Kindle Paperwhite",
-        image: "https://images-na.ssl-images-amazon.com/images/I/61RCJ2vaywL._AC_SL1000_.jpg",
-        description: "Wasserfestes E-Book mit langer Akkulaufzeit.",
-        link:https://amzn.to/42YUAL1
-      }
-    ];
-
-    const productList = document.getElementById("productList");
-    const searchInput = document.getElementById("search");
-
-    function renderProducts(filteredProducts) {
-      productList.innerHTML = "";
-      filteredProducts.forEach(product => {
-        const div = document.createElement("div");
-        div.className = "product";
-        div.innerHTML = `
-          <img src="${product.image}" alt="${product.name}">
-          <h2>${product.name}</h2>
-          <p>${product.description}</p>
-          <a href="${product.link}" target="_blank">Auf Amazon ansehen</a>
-        `;
-        productList.appendChild(div);
-      });
-    }
-
-    searchInput.addEventListener("input", () => {
-      const query = searchInput.value.toLowerCase();
-      const filtered = products.filter(p => 
-        p.name.toLowerCase().includes(query) || 
-        p.description.toLowerCase().includes(query)
-      );
-      renderProducts(filtered);
-    });
-
-    renderProducts(products); // Initiale Anzeige
-  </script>
+  <footer>
+    © 2025 Deine Affiliate-Seite – powered by GitHub Pages
+  </footer>
 </body>
 </html>
-       
